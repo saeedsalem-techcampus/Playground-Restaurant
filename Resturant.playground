@@ -1,0 +1,13 @@
+import UIKit
+
+func foodInMenu(foodList:[String:Double],selectedFood:String)->Double{
+    return foodList[selectedFood] ?? 0.0
+}
+var billAmount:Double = 0
+var foodMenu = [
+    "Beef Burger":18.75,"Cheese Burger":20.77,"Quarter Pounder with Cheese":18,"Big Tasty":10
+]
+billAmount += foodInMenu(foodList:foodMenu,selectedFood: "Beef Burger")
+billAmount += foodInMenu(foodList:foodMenu,selectedFood: "Big Tasty")
+billAmount += foodInMenu(foodList:foodMenu,selectedFood: "Big")
+print(billAmount)
